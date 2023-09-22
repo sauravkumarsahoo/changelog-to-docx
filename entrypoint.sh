@@ -1,4 +1,4 @@
 #! /bin/sh -l
 
-echo "Converting CHANGELOG.md to DOCX"
-pandoc CHANGELOG.md -o $1
+echo "Converting RELEASE_NOTES.md to DOCX"
+pandoc RELEASE_NOTES.md -o $1
