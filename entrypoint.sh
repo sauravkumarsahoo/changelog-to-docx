@@ -1,4 +1,4 @@
 #! /bin/sh -l
 
-echo "Converting RELEASE_NOTES.md to DOCX"
-pandoc RELEASE_NOTES.md -o $1
+echo "Converting $1 to DOCX"
+pandoc $1 -o $2
