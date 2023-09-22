@@ -1,10 +1,12 @@
-name: "README to DOCX"
-description: 'Convert README.md to *.docx'
+name: "MD to DOCX"
+description: 'Converts Markdown File to Docx Word Document'
 inputs:
+  input-name:
+    description: 'Name of input file, must be a markdown file'
+    required: true
   output-name:
     description: 'Name of output file'
-    required: false
-    default: 'readme.docx'
+    required: true
 outputs:
   file:
     description: 'file generated'
@@ -12,4 +14,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.input-name }}
     - ${{ inputs.output-name }}
